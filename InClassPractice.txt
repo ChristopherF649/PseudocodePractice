@@ -24,6 +24,21 @@ ELSE IF c is a lowercase letter
 uppercaseText = upercaseText + c;
 }
 
+IF invalidCharacter == true
+{
+  OUTPUT "Error: Input must be letters only."
+}
+ELSE IF hasLowerCase == false
+{
+  OUTPUT "Input is already uppercase"
+}
+ELSE
+{
+  OUTPUT "text in all caps: " + upperCaseText;
+}
+
+//END
+
 //Second Task
 
 string inputOne;
@@ -38,10 +53,29 @@ INPUT inputOne;
 OUTPUT "Enter second number: "
 INPUT inputTwo;
 
-IF inputOne is NOT a valid number OR inputTwo is NOT a valid number
+IF inputOne is NOT a valid number
+{
+  OUTPUT "Error: Please enter valid numbers only."
+  validInput = false
+}
 
-OUTPUT "Error: Please enter valid numbers only."
-validInput = false
+IF inputTwo is NOT a valid number
+{
+  OUTPUT "Error: Second number is not valid";
+  validInput == false;
+}
+
+IF validInput == true
+{
+  numberOne = convert inputOne to number
+  numberTwo = convert inputTwo to number
+
+  float sum = numberOne + numberTwo;
+
+OUTPUT "The sun is: " + sum;
+}
+
+//END
 
 // Third Task
 
@@ -52,6 +86,29 @@ bool isRunning = true;
 
 OUTPUT "Enter the numbers you wish to add: ";
 OUTPUT "Type "Done" to finish.";
+
+WHILE isRunning == true;
+{
+  INPUT userInput;
+
+  IF userInput == "done"
+{
+  running = false;
+}
+ELSE IF userInput is NOT a valid number
+{
+  OUTPUT "Error: please enter a valid number."
+}
+ELSE
+{
+  number = convert userInput to number;
+   total = total+number;
+}
+
+OUTPUT "TOTAL SUM: " + total;
+}
+
+//END
 
 // Fourth Task
 
@@ -74,7 +131,23 @@ Else
   maxNumber = convert userInput to int
 
   IF maxNumber = 0
+{
+   OUTPUT "Error: Number has to be greater than 0."
 }
+ELSE
+{
+  valid = true;
+}
+
+// use a random number generator
+SEED random number
+
+randomREsult = RANDOM number between 0 and maxNumber;
+
+OUTPUT "Random number: " + randomResult;
+}
+
+//END
 
 // Fifth Task
 
@@ -120,3 +193,5 @@ ELSE
 OUTPUT "LEFT" + leftCount + " Times";
 OUTPUT "RIGHT" + rightCount + " Times";
 }
+
+//END
