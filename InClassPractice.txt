@@ -1,3 +1,122 @@
 -- This is the in-class pseudocode practice assignment -- 
 
-Woop Woop
+// First Task //
+
+string userInput;
+string upperCaseText = "";
+bool hasLowerCase = false;
+bool invalidCharacter = false;
+
+OUTPUT "Enter text (Letters only please): ";
+INPUT uesrInput;
+
+FOR each character 'c' in userInput
+{
+  IF c is a number OR c is a symbol
+{
+  invalid character = true;
+}
+ELSE IF c is a lowercase letter
+{
+  hasLowercase = true;
+  c = convert c to uppercase
+}
+uppercaseText = upercaseText + c;
+}
+
+//Second Task
+
+string inputOne;
+string inputTwo;
+float numberOne;
+float numberTwo;
+bool validInput = true;
+
+OUTPUT "Enter first number: "
+INPUT inputOne;
+
+OUTPUT "Enter second number: "
+INPUT inputTwo;
+
+IF inputOne is NOT a valid number OR inputTwo is NOT a valid number
+
+OUTPUT "Error: Please enter valid numbers only."
+validInput = false
+
+// Third Task
+
+string userInput;
+float number;
+float total;
+bool isRunning = true;
+
+OUTPUT "Enter the numbers you wish to add: ";
+OUTPUT "Type "Done" to finish.";
+
+// Fourth Task
+
+string userInput;
+int maxNumber;
+int randomNumber;
+bool valid = false;
+
+WHIlE valid == false
+{
+  OUTPUT "Enter a maximum number (Greater than 0): "
+  INPUT userInput
+
+  IF userInput is not a valid int
+{
+  OUTPUT "Please enter a valid whole number."
+}
+Else
+{
+  maxNumber = convert userInput to int
+
+  IF maxNumber = 0
+}
+
+// Fifth Task
+
+int number;
+
+int leftCount = 0; // Odd
+int rightCount = 0; // Even
+bool running = true;
+
+OUTPUT "Enter a random number: ";
+OUTPUT "Type 'done' to stop";
+
+While running == true
+{
+  INPUT userInput
+
+  IF userInput == "done"
+{
+  running = false;
+}
+ELSE IF
+{
+  OUTPUT "Error: Please enter a valid number."
+}
+ELSE
+{
+  number = convert userInput to int;
+
+  IF number %2 == 0
+{
+  OUTPUT "RIGHT";
+  rightCount = rightCount + 1;
+}
+
+ELSE
+{
+  OUTPUT "LEFT";
+  leftCount = leftCount + 1;
+}
+
+}
+
+OUTPUT "LEFT" + leftCount + " Times";
+OUTPUT "RIGHT" + rightCount + " Times";
+}
